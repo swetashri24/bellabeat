@@ -78,7 +78,7 @@ The process adopted for cleaning, analyzing and visualizing are explained along 
 A set of basic packages were installed and loaded in R
 
 ```{r}
-library(readr) # reads a csv file
+library(readr) # reads a csv file`
 library(tidyverse) # for data cleaning and processing
 library(tidyr) # for data cleaning and processing
 library(dplyr) # for data processing
@@ -90,10 +90,10 @@ library(ggplot2)#graphical functions
 
 ### Understanding daily activity and user behavior
 
-The file dailyActivity_merged contains daily data. An initial inspection of data is done.
+The file dailyActivity_merged contains daily data. An ini`tial inspection of data is done.
 
 ```{r}
-daily_activity<-read_csv("/Users/sweta/Documents/Courses/Google Data Analytics/8_Capstone_project/3684007/Fitbit_data/dailyActivity_merged.csv") #reading file and assigning it to a dataframe
+daily_activity<-read_csv("./Fitbit_data/dailyActivity_merged.csv") #reading file and assigning it to a dataframe
 head(daily_activity) # show top few rows
 glimpse(daily_activity) # gives a glimpse of the data types, number of columns  
 ```
@@ -579,7 +579,7 @@ Observations: \
 Hourly intensities heat map very plotted and analyzed to know the probable time that a user is most likely to be active
 
 ```{r}
-hourly_intensities<-read_csv("/Users/sweta/Documents/Courses/Google Data Analytics/8_Capstone_project/3684007/Fitbit_data/hourlyIntensities_merged.csv")
+hourly_intensities<-read_csv("./Fitbit_data/hourlyIntensities_merged.csv")
 ```
 
 ```{r}
@@ -658,7 +658,7 @@ Observations: \
 Hourly steps data was read from a .csv and was processed for analysis
 
 ```{r}
-hourlySteps_merged <- read_csv("/Users/sweta/Documents/Courses/Google Data Analytics/8_Capstone_project/3684007/Fitbit_data/hourlySteps_merged.csv")
+hourlySteps_merged <- read_csv("./Fitbit_data/hourlySteps_merged.csv")
 ```
 
 ```{r}
@@ -729,7 +729,7 @@ Observations: \
 
 Reading sleep data provided, cleaning and processing it\
 ```{r}
-minuteSleep_merged <- read_csv("/Users/sweta/Documents/Courses/Google Data Analytics/8_Capstone_project/3684007/Fitbit_data/minuteSleep_merged.csv")
+minuteSleep_merged <- read_csv("./Fitbit_data/minuteSleep_merged.csv")
 drop_na(minuteSleep_merged)
 head(minuteSleep_merged)
 ```
@@ -799,7 +799,7 @@ Observations:\
 Understanding the importance of heart rate data obtained in Fitbit among users
 ```{r}
 #loading relevant file and cleaning
-heartrate_seconds_merged <- read_csv("/Users/sweta/Documents/Courses/Google Data Analytics/8_Capstone_project/3684007/Fitbit_data/heartrate_seconds_merged.csv")
+heartrate_seconds_merged <- read_csv("./Fitbit_data/heartrate_seconds_merged.csv")
 head(heartrate_seconds_merged)
 ```
 
