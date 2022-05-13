@@ -1,0 +1,1963 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Bellabeat Marketing Strategy},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Bellabeat Marketing Strategy}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hypertarget{ask}{%
+\subsection{Ask}\label{ask}}
+
+Bellabeat a company providing fitness products such as Bellabeat app,
+Leaf, watch , water bottle and personal guidance wants to access the
+current trends in the usage of fitness devices. Their main business task
+to be addressed is developing a marketing strategy for Bellabeat
+products. This marketing strategy is proposed to be developed on the
+basis of the current usage of trends provided by users of another
+fitness device named ``Fitbit''.
+
+Questions to be mainly answered from this analysis are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What are the current trends in smart device usage?
+\item
+  How could these trends apply to Bellabeat customers?
+\item
+  How could these trends influence Bellabeat Marketing strategy?
+\end{enumerate}
+
+\hypertarget{data-source}{%
+\subsubsection{Data source}\label{data-source}}
+
+Fitbit user database provided by Mobius.This dataset was generated by
+respondents to a distributed survey via Amazon Mechanical Turk. This
+database consists of daily usage data of 33 users for the period April
+12, 2016- May 12, 2016. These users consented to the submission of
+personal tracker data. This data includes minute-level output for
+physical activity, heart rate, and sleep monitoring. It includes
+information about daily activity, steps, and heart rate.
+
+\hypertarget{prepare}{%
+\subsection{Prepare}\label{prepare}}
+
+This data was downloaded from a Kaggle data set provided by Mobius. The
+data is organized as a set of 18 csv files. The users consented to
+provide their personal fitness data and it hides individual information.
+Mainly 5 data sets have been used here. They are: 1. Daily activity of
+users 2. Hourly intensities of users 3. Hourly steps of users 4. User
+sleep data 5. Heart rate per seconds of recorded user activity
+
+\hypertarget{process}{%
+\subsection{Process}\label{process}}
+
+Using RStudio for cleaning data. This tool is being user here as it can
+help in cleaning, analyzing and visualizing data. Rstudio is also be
+used for documentation.
+
+\hypertarget{cleaning-data}{%
+\subsubsection{Cleaning data}\label{cleaning-data}}
+
+Installing packages in R to read and clean data
+
+Steps followed in cleaning 1. Data checked for any null values 2. Type
+of each column in the dataset is checked to make sure it is compatible
+with analysis and visualization
+
+\hypertarget{analyze}{%
+\subsection{Analyze}\label{analyze}}
+
+Data was analyzed using 1. Histograms 2. Pivot tables 3. Heat maps
+
+\hypertarget{share}{%
+\subsection{Share}\label{share}}
+
+The analyzed data are simultaneously visualized below. The key
+observations from each visualization are noted below them.
+
+\hypertarget{combined-cleaning-analyzing-and-visualization-step}{%
+\subsection{Combined Cleaning, Analyzing and Visualization
+Step}\label{combined-cleaning-analyzing-and-visualization-step}}
+
+A set of basic packages were installed and loaded in R
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readr) }\CommentTok{\# reads a csv file}
+\FunctionTok{library}\NormalTok{(tidyverse) }\CommentTok{\# for data cleaning and processing}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.6     v dplyr   1.0.9
+## v tibble  3.1.7     v stringr 1.4.0
+## v tidyr   1.2.0     v forcats 0.5.1
+## v purrr   0.3.4
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyr) }\CommentTok{\# for data cleaning and processing}
+\FunctionTok{library}\NormalTok{(dplyr) }\CommentTok{\# for data processing}
+\FunctionTok{library}\NormalTok{(lubridate) }\CommentTok{\# date and time processing}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'lubridate'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     date, intersect, setdiff, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(yarrr) }\CommentTok{\# statistical functions}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: jpeg
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: BayesFactor
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: coda
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Matrix
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Matrix'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:tidyr':
+## 
+##     expand, pack, unpack
+\end{verbatim}
+
+\begin{verbatim}
+## ************
+## Welcome to BayesFactor 0.9.12-4.3. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
+## 
+## Type BFManual() to open the manual.
+## ************
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: circlize
+\end{verbatim}
+
+\begin{verbatim}
+## ========================================
+## circlize version 0.4.14
+## CRAN page: https://cran.r-project.org/package=circlize
+## Github page: https://github.com/jokergoo/circlize
+## Documentation: https://jokergoo.github.io/circlize_book/book/
+## 
+## If you use it in published research, please cite:
+## Gu, Z. circlize implements and enhances circular visualization
+##   in R. Bioinformatics 2014.
+## 
+## This message can be suppressed by:
+##   suppressPackageStartupMessages(library(circlize))
+## ========================================
+\end{verbatim}
+
+\begin{verbatim}
+## yarrr v0.1.5. Citation info at citation('yarrr'). Package guide at yarrr.guide()
+\end{verbatim}
+
+\begin{verbatim}
+## Email me at Nathaniel.D.Phillips.is@gmail.com
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'yarrr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:ggplot2':
+## 
+##     diamonds
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}\CommentTok{\#graphical functions}
+\end{Highlighting}
+\end{Shaded}
+
+The file dailyActivity\_merged contains daily data. An initial
+inspection of data is done.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readr)}
+\NormalTok{daily\_activity}\OtherTok{\textless{}{-}}\FunctionTok{read\_csv}\NormalTok{(}\StringTok{"/Users/sweta/Documents/Courses/Google Data Analytics/8\_Capstone\_project/3684007/Fitbit\_data/dailyActivity\_merged.csv"}\NormalTok{) }\CommentTok{\#reading file and assigning it to a dataframe}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 940 Columns: 15
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (1): ActivityDate
+## dbl (14): Id, TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDi...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(daily\_activity) }\CommentTok{\# show top few rows}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 15
+##        Id ActivityDate TotalSteps TotalDistance TrackerDistance LoggedActivitie~
+##     <dbl> <chr>             <dbl>         <dbl>           <dbl>            <dbl>
+## 1  1.50e9 4/12/2016         13162          8.5             8.5                 0
+## 2  1.50e9 4/13/2016         10735          6.97            6.97                0
+## 3  1.50e9 4/14/2016         10460          6.74            6.74                0
+## 4  1.50e9 4/15/2016          9762          6.28            6.28                0
+## 5  1.50e9 4/16/2016         12669          8.16            8.16                0
+## 6  1.50e9 4/17/2016          9705          6.48            6.48                0
+## # ... with 9 more variables: VeryActiveDistance <dbl>,
+## #   ModeratelyActiveDistance <dbl>, LightActiveDistance <dbl>,
+## #   SedentaryActiveDistance <dbl>, VeryActiveMinutes <dbl>,
+## #   FairlyActiveMinutes <dbl>, LightlyActiveMinutes <dbl>,
+## #   SedentaryMinutes <dbl>, Calories <dbl>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{glimpse}\NormalTok{(daily\_activity) }\CommentTok{\# gives a glimpse of the data types, number of columns  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 940
+## Columns: 15
+## $ Id                       <dbl> 1503960366, 1503960366, 1503960366, 150396036~
+## $ ActivityDate             <chr> "4/12/2016", "4/13/2016", "4/14/2016", "4/15/~
+## $ TotalSteps               <dbl> 13162, 10735, 10460, 9762, 12669, 9705, 13019~
+## $ TotalDistance            <dbl> 8.50, 6.97, 6.74, 6.28, 8.16, 6.48, 8.59, 9.8~
+## $ TrackerDistance          <dbl> 8.50, 6.97, 6.74, 6.28, 8.16, 6.48, 8.59, 9.8~
+## $ LoggedActivitiesDistance <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+## $ VeryActiveDistance       <dbl> 1.88, 1.57, 2.44, 2.14, 2.71, 3.19, 3.25, 3.5~
+## $ ModeratelyActiveDistance <dbl> 0.55, 0.69, 0.40, 1.26, 0.41, 0.78, 0.64, 1.3~
+## $ LightActiveDistance      <dbl> 6.06, 4.71, 3.91, 2.83, 5.04, 2.51, 4.71, 5.0~
+## $ SedentaryActiveDistance  <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ~
+## $ VeryActiveMinutes        <dbl> 25, 21, 30, 29, 36, 38, 42, 50, 28, 19, 66, 4~
+## $ FairlyActiveMinutes      <dbl> 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21~
+## $ LightlyActiveMinutes     <dbl> 328, 217, 181, 209, 221, 164, 233, 264, 205, ~
+## $ SedentaryMinutes         <dbl> 728, 776, 1218, 726, 773, 539, 1149, 775, 818~
+## $ Calories                 <dbl> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203~
+\end{verbatim}
+
+glimpse() function shows the type of the data. Here Id (User Id) is
+considered a ``double'' and ActivityDate (Date) is considered character.
+Changing the type of column in dataframe for cleaning
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# dropping n/a values }
+\NormalTok{daily\_activity}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{drop\_na}\NormalTok{()}\SpecialCharTok{\%\textgreater{}\%}
+ \FunctionTok{str}\NormalTok{(daily\_activity) }\CommentTok{\# gives data types in column}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## tibble [940 x 15] (S3: tbl_df/tbl/data.frame)
+##  $ Id                      : num [1:940] 1.5e+09 1.5e+09 1.5e+09 1.5e+09 1.5e+09 ...
+##  $ ActivityDate            : chr [1:940] "4/12/2016" "4/13/2016" "4/14/2016" "4/15/2016" ...
+##  $ TotalSteps              : num [1:940] 13162 10735 10460 9762 12669 ...
+##  $ TotalDistance           : num [1:940] 8.5 6.97 6.74 6.28 8.16 ...
+##  $ TrackerDistance         : num [1:940] 8.5 6.97 6.74 6.28 8.16 ...
+##  $ LoggedActivitiesDistance: num [1:940] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ VeryActiveDistance      : num [1:940] 1.88 1.57 2.44 2.14 2.71 ...
+##  $ ModeratelyActiveDistance: num [1:940] 0.55 0.69 0.4 1.26 0.41 ...
+##  $ LightActiveDistance     : num [1:940] 6.06 4.71 3.91 2.83 5.04 ...
+##  $ SedentaryActiveDistance : num [1:940] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ VeryActiveMinutes       : num [1:940] 25 21 30 29 36 38 42 50 28 19 ...
+##  $ FairlyActiveMinutes     : num [1:940] 13 19 11 34 10 20 16 31 12 8 ...
+##  $ LightlyActiveMinutes    : num [1:940] 328 217 181 209 221 164 233 264 205 211 ...
+##  $ SedentaryMinutes        : num [1:940] 728 776 1218 726 773 ...
+##  $ Calories                : num [1:940] 1985 1797 1776 1745 1863 ...
+\end{verbatim}
+
+Dropping unnecessary columns
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{daily\_activity}\OtherTok{\textless{}{-}}\NormalTok{daily\_activity}\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{TrackerDistance,}\SpecialCharTok{{-}}\NormalTok{LoggedActivitiesDistance,}\SpecialCharTok{{-}}\NormalTok{SedentaryActiveDistance)}
+\FunctionTok{str}\NormalTok{(daily\_activity)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## tibble [940 x 12] (S3: tbl_df/tbl/data.frame)
+##  $ Id                      : num [1:940] 1.5e+09 1.5e+09 1.5e+09 1.5e+09 1.5e+09 ...
+##  $ ActivityDate            : chr [1:940] "4/12/2016" "4/13/2016" "4/14/2016" "4/15/2016" ...
+##  $ TotalSteps              : num [1:940] 13162 10735 10460 9762 12669 ...
+##  $ TotalDistance           : num [1:940] 8.5 6.97 6.74 6.28 8.16 ...
+##  $ VeryActiveDistance      : num [1:940] 1.88 1.57 2.44 2.14 2.71 ...
+##  $ ModeratelyActiveDistance: num [1:940] 0.55 0.69 0.4 1.26 0.41 ...
+##  $ LightActiveDistance     : num [1:940] 6.06 4.71 3.91 2.83 5.04 ...
+##  $ VeryActiveMinutes       : num [1:940] 25 21 30 29 36 38 42 50 28 19 ...
+##  $ FairlyActiveMinutes     : num [1:940] 13 19 11 34 10 20 16 31 12 8 ...
+##  $ LightlyActiveMinutes    : num [1:940] 328 217 181 209 221 164 233 264 205 211 ...
+##  $ SedentaryMinutes        : num [1:940] 728 776 1218 726 773 ...
+##  $ Calories                : num [1:940] 1985 1797 1776 1745 1863 ...
+\end{verbatim}
+
+Creating a new dataframe with required column type
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Day\_week}\OtherTok{\textless{}{-}}\FunctionTok{transform}\NormalTok{(daily\_activity,}\AttributeTok{ActivityDate=}\FunctionTok{as.Date}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(daily\_activity[[}\DecValTok{2}\NormalTok{]]),}\StringTok{"\%m/\%d/\%y"}\NormalTok{))}
+\NormalTok{Day\_week}\OtherTok{\textless{}{-}}\FunctionTok{transform}\NormalTok{(Day\_week,}\AttributeTok{Id=}\FunctionTok{as.character}\NormalTok{(}\FunctionTok{as.double}\NormalTok{(Day\_week[[}\DecValTok{1}\NormalTok{]])))}
+\FunctionTok{str}\NormalTok{(Day\_week)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    940 obs. of  12 variables:
+##  $ Id                      : chr  "1503960366" "1503960366" "1503960366" "1503960366" ...
+##  $ ActivityDate            : Date, format: "2020-04-12" "2020-04-13" ...
+##  $ TotalSteps              : num  13162 10735 10460 9762 12669 ...
+##  $ TotalDistance           : num  8.5 6.97 6.74 6.28 8.16 ...
+##  $ VeryActiveDistance      : num  1.88 1.57 2.44 2.14 2.71 ...
+##  $ ModeratelyActiveDistance: num  0.55 0.69 0.4 1.26 0.41 ...
+##  $ LightActiveDistance     : num  6.06 4.71 3.91 2.83 5.04 ...
+##  $ VeryActiveMinutes       : num  25 21 30 29 36 38 42 50 28 19 ...
+##  $ FairlyActiveMinutes     : num  13 19 11 34 10 20 16 31 12 8 ...
+##  $ LightlyActiveMinutes    : num  328 217 181 209 221 164 233 264 205 211 ...
+##  $ SedentaryMinutes        : num  728 776 1218 726 773 ...
+##  $ Calories                : num  1985 1797 1776 1745 1863 ...
+\end{verbatim}
+
+Changing column names to maintaining naming consistency
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{colnames}\NormalTok{(Day\_week)[}\FunctionTok{colnames}\NormalTok{(Day\_week) }\SpecialCharTok{==} \StringTok{"FairlyActiveMinutes"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"ModeratelyActiveMinutes"}
+\FunctionTok{glimpse}\NormalTok{(Day\_week)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 940
+## Columns: 12
+## $ Id                       <chr> "1503960366", "1503960366", "1503960366", "15~
+## $ ActivityDate             <date> 2020-04-12, 2020-04-13, 2020-04-14, 2020-04-~
+## $ TotalSteps               <dbl> 13162, 10735, 10460, 9762, 12669, 9705, 13019~
+## $ TotalDistance            <dbl> 8.50, 6.97, 6.74, 6.28, 8.16, 6.48, 8.59, 9.8~
+## $ VeryActiveDistance       <dbl> 1.88, 1.57, 2.44, 2.14, 2.71, 3.19, 3.25, 3.5~
+## $ ModeratelyActiveDistance <dbl> 0.55, 0.69, 0.40, 1.26, 0.41, 0.78, 0.64, 1.3~
+## $ LightActiveDistance      <dbl> 6.06, 4.71, 3.91, 2.83, 5.04, 2.51, 4.71, 5.0~
+## $ VeryActiveMinutes        <dbl> 25, 21, 30, 29, 36, 38, 42, 50, 28, 19, 66, 4~
+## $ ModeratelyActiveMinutes  <dbl> 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21~
+## $ LightlyActiveMinutes     <dbl> 328, 217, 181, 209, 221, 164, 233, 264, 205, ~
+## $ SedentaryMinutes         <dbl> 728, 776, 1218, 726, 773, 539, 1149, 775, 818~
+## $ Calories                 <dbl> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203~
+\end{verbatim}
+
+Converting date to day of week
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Day\_week}\OtherTok{\textless{}{-}}\FunctionTok{transform}\NormalTok{(Day\_week,}\AttributeTok{day\_of\_week=}\FunctionTok{weekdays}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{ActivityDate))}
+\FunctionTok{glimpse}\NormalTok{(Day\_week)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 940
+## Columns: 13
+## $ Id                       <chr> "1503960366", "1503960366", "1503960366", "15~
+## $ ActivityDate             <date> 2020-04-12, 2020-04-13, 2020-04-14, 2020-04-~
+## $ TotalSteps               <dbl> 13162, 10735, 10460, 9762, 12669, 9705, 13019~
+## $ TotalDistance            <dbl> 8.50, 6.97, 6.74, 6.28, 8.16, 6.48, 8.59, 9.8~
+## $ VeryActiveDistance       <dbl> 1.88, 1.57, 2.44, 2.14, 2.71, 3.19, 3.25, 3.5~
+## $ ModeratelyActiveDistance <dbl> 0.55, 0.69, 0.40, 1.26, 0.41, 0.78, 0.64, 1.3~
+## $ LightActiveDistance      <dbl> 6.06, 4.71, 3.91, 2.83, 5.04, 2.51, 4.71, 5.0~
+## $ VeryActiveMinutes        <dbl> 25, 21, 30, 29, 36, 38, 42, 50, 28, 19, 66, 4~
+## $ ModeratelyActiveMinutes  <dbl> 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21~
+## $ LightlyActiveMinutes     <dbl> 328, 217, 181, 209, 221, 164, 233, 264, 205, ~
+## $ SedentaryMinutes         <dbl> 728, 776, 1218, 726, 773, 539, 1149, 775, 818~
+## $ Calories                 <dbl> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 203~
+## $ day_of_week              <chr> "Sunday", "Monday", "Tuesday", "Wednesday", "~
+\end{verbatim}
+
+Ordering day of week to get the right plot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Day\_week}\SpecialCharTok{$}\NormalTok{rev\_ord.x }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{day\_of\_week, }\AttributeTok{ordered=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"Sunday"}\NormalTok{, }\StringTok{"Saturday"}\NormalTok{, }\StringTok{"Friday"}\NormalTok{, }\StringTok{"Thursday"}\NormalTok{, }\StringTok{"Wednesday"}\NormalTok{,}\StringTok{"Tuesday"}\NormalTok{,}\StringTok{"Monday"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Normalizing the activity in terms of weeks to understand Total steps
+taken by user in a day
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Day\_week}\SpecialCharTok{$}\NormalTok{week\_no}\OtherTok{\textless{}{-}}\FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{format}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{ActivityDate,}\StringTok{"\%W"}\NormalTok{)) }
+\NormalTok{Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week}\OtherTok{\textless{}{-}}\DecValTok{1}\SpecialCharTok{+}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{week\_no}\SpecialCharTok{{-}}\FunctionTok{min}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{week\_no))}
+\end{Highlighting}
+\end{Shaded}
+
+HeatMap representing total steps by each user in a day
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(Day\_week, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{norm\_week, }\AttributeTok{y=}\NormalTok{rev\_ord.x, }\AttributeTok{fill =}\NormalTok{ TotalSteps)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id) }\SpecialCharTok{+} \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{high=}\StringTok{"green"}\NormalTok{) }\SpecialCharTok{+}  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Activity Week"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Day of week"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Weekly Heatmap:Daily Steps"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Total Steps"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{5}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks=}\FunctionTok{round}\NormalTok{(}\FunctionTok{seq}\NormalTok{(}\FunctionTok{min}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week),}\FunctionTok{max}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week),}\AttributeTok{by=}\DecValTok{1}\NormalTok{),}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-10-1.pdf}
+Observations: 1. Users very likely to move more or have more steps on a
+Thursday. 2. Only 1-2 users consistently moved above 30000 steps a day.
+3. About \textasciitilde15 users moved around 10000 steps a day.
+
+Breakdown of daily steps are furthered studied by day of week
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{steps\_data}\OtherTok{\textless{}{-}}\NormalTok{Day\_week}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(}\AttributeTok{Days\_of\_week=}\NormalTok{rev\_ord.x)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{min\_steps=}\FunctionTok{min}\NormalTok{(TotalSteps),}\AttributeTok{max\_steps=}\FunctionTok{max}\NormalTok{(TotalSteps),}\AttributeTok{avg\_steps=}\FunctionTok{mean}\NormalTok{(TotalSteps), }\AttributeTok{steps\_lessthan\_10k=}\FunctionTok{sum}\NormalTok{(TotalSteps}\SpecialCharTok{\textless{}}\DecValTok{10000}\NormalTok{), }\AttributeTok{steps\_morethan\_20k=}\FunctionTok{sum}\NormalTok{(TotalSteps}\SpecialCharTok{\textgreater{}}\DecValTok{20000}\NormalTok{), }\AttributeTok{steps\_zero=}\FunctionTok{sum}\NormalTok{(TotalSteps}\SpecialCharTok{==}\DecValTok{0}\NormalTok{), }\AttributeTok{steps\_between\_10\_20k=}\NormalTok{(}\FunctionTok{sum}\NormalTok{(TotalSteps}\SpecialCharTok{\textgreater{}}\DecValTok{10000}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{sum}\NormalTok{(TotalSteps}\SpecialCharTok{\textgreater{}}\DecValTok{20000}\NormalTok{)))}
+\FunctionTok{head}\NormalTok{(steps\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 8
+##   Days_of_week min_steps max_steps avg_steps steps_lessthan_10k steps_morethan_~
+##   <ord>            <dbl>     <dbl>     <dbl>              <int>            <int>
+## 1 Sunday               0     23186     8125.                 92                1
+## 2 Saturday             0     20500     7781.                 80                2
+## 3 Friday               0     36019     6933.                 88                3
+## 4 Thursday             0     29326     8153.                 82                6
+## 5 Wednesday            0     21727     7448.                 93                3
+## 6 Tuesday              0     21129     7406.                101                2
+## # ... with 2 more variables: steps_zero <int>, steps_between_10_20k <int>
+\end{verbatim}
+
+Evaluating min, max and average steps
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{steps\_data\_summary}\OtherTok{\textless{}{-}}\NormalTok{ steps\_data }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{steps\_lessthan\_10k,}\SpecialCharTok{{-}}\NormalTok{steps\_zero,}\SpecialCharTok{{-}}\NormalTok{steps\_morethan\_20k,}\SpecialCharTok{{-}}\NormalTok{steps\_between\_10\_20k)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total, Value,}\SpecialCharTok{{-}}\NormalTok{Days\_of\_week)}
+\NormalTok{steps\_data\_summary}\SpecialCharTok{$}\NormalTok{Days\_of\_week}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(steps\_data\_summary}\SpecialCharTok{$}\NormalTok{Days\_of\_week,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Monday"}\NormalTok{, }\StringTok{"Tuesday"}\NormalTok{, }\StringTok{"Wednesday"}\NormalTok{, }\StringTok{"Thursday"}\NormalTok{, }\StringTok{"Friday"}\NormalTok{, }\StringTok{"Saturday"}\NormalTok{, }\StringTok{"Sunday"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Plot for steps
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{steps\_data\_summary,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Days\_of\_week,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Steps summary on the basis of days"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Day of Week"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Steps taken"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Steps taken by users"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"navyblue"}\NormalTok{, }\StringTok{"blueviolet"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Steps taken"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"min\_steps"}\NormalTok{, }\StringTok{"avg\_steps"}\NormalTok{, }\StringTok{"max\_steps"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Minimum steps"}\NormalTok{, }\StringTok{"Average steps"}\NormalTok{, }\StringTok{"Maximum steps"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{steps\_data\_plot}\OtherTok{\textless{}{-}}\NormalTok{ steps\_data}\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{min\_steps,}\SpecialCharTok{{-}}\NormalTok{max\_steps,}\SpecialCharTok{{-}}\NormalTok{avg\_steps)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total, Value,}\SpecialCharTok{{-}}\NormalTok{Days\_of\_week)}
+
+\NormalTok{steps\_data\_plot}\SpecialCharTok{$}\NormalTok{Days\_of\_week}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(steps\_data\_plot}\SpecialCharTok{$}\NormalTok{Days\_of\_week,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Monday"}\NormalTok{, }\StringTok{"Tuesday"}\NormalTok{, }\StringTok{"Wednesday"}\NormalTok{, }\StringTok{"Thursday"}\NormalTok{, }\StringTok{"Friday"}\NormalTok{, }\StringTok{"Saturday"}\NormalTok{, }\StringTok{"Sunday"}\NormalTok{))}
+\NormalTok{steps\_data\_plot}\SpecialCharTok{$}\NormalTok{Total}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(steps\_data\_plot}\SpecialCharTok{$}\NormalTok{Total,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"steps\_zero"}\NormalTok{, }\StringTok{"steps\_lessthan\_10k"}\NormalTok{, }\StringTok{"steps\_between\_10\_20k"}\NormalTok{, }\StringTok{"steps\_morethan\_20k"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{steps\_data\_plot,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Days\_of\_week,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Steps moved on the basis of days"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Day of Week"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Frequency"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Steps taken by users"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"navyblue"}\NormalTok{, }\StringTok{"blueviolet"}\NormalTok{, }\StringTok{"darkgreen"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Steps taken"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"steps\_zero"}\NormalTok{, }\StringTok{"steps\_lessthan\_10k"}\NormalTok{, }\StringTok{"steps\_between\_10\_20k"}\NormalTok{, }\StringTok{"steps\_morethan\_20k"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Zero"}\NormalTok{, }\StringTok{"\textless{}10000"}\NormalTok{, }\StringTok{"10000{-}20000"}\NormalTok{,}\StringTok{"\textgreater{}20000"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-15-1.pdf}
+Observations: 1. Users exhibit a general tendency to move around 10000
+steps daily. 2. High likelihood of moving below 10000 steps movement is
+on Monday and Tuesday. 3. Among users moving 10000-20000 daily, they are
+very likely to move more on a Sunday. 4. Among users moving above 20000
+steps, the likehood of this movement is high on a Thursday. 5. Users are
+less likely to not move on a Sunday or Tuesday
+
+HeatMap representing daily calories burned
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(Day\_week, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{norm\_week, }\AttributeTok{y=}\NormalTok{rev\_ord.x, }\AttributeTok{fill =}\NormalTok{ Calories)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id) }\SpecialCharTok{+} \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"yellow"}\NormalTok{, }\AttributeTok{high=}\StringTok{"red"}\NormalTok{) }\SpecialCharTok{+}  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Activity Week"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Day of week"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Weekly Heatmap:Calories"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Calories burned"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{5}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks=}\FunctionTok{round}\NormalTok{(}\FunctionTok{seq}\NormalTok{(}\FunctionTok{min}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week),}\FunctionTok{max}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week),}\AttributeTok{by=}\DecValTok{1}\NormalTok{),}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-16-1.pdf}
+Observations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  About \textasciitilde5 users burned calories intensively suggesting
+  very few users follow intensive workout regime
+\item
+  High calories burned among users is mainly on a Sunday or Monday
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{calories\_data}\OtherTok{\textless{}{-}}\NormalTok{Day\_week}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(}\AttributeTok{Days\_of\_week=}\NormalTok{rev\_ord.x)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{calories\_zero=}\FunctionTok{sum}\NormalTok{(Calories}\SpecialCharTok{==}\DecValTok{0}\NormalTok{),}\AttributeTok{calories\_lessthan1k=}\FunctionTok{sum}\NormalTok{(Calories}\SpecialCharTok{\textless{}}\DecValTok{1000}\NormalTok{),  }\AttributeTok{calories\_between\_1\_3k=}\NormalTok{(}\FunctionTok{sum}\NormalTok{(Calories}\SpecialCharTok{\textgreater{}}\DecValTok{1000}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{sum}\NormalTok{(Calories}\SpecialCharTok{\textgreater{}}\DecValTok{3000}\NormalTok{)), }\AttributeTok{calories\_morethan\_3k=}\FunctionTok{sum}\NormalTok{(Calories}\SpecialCharTok{\textgreater{}}\DecValTok{3000}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total, Value,}\SpecialCharTok{{-}}\NormalTok{Days\_of\_week)}
+\NormalTok{calories\_data}\SpecialCharTok{$}\NormalTok{Days\_of\_week}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(calories\_data}\SpecialCharTok{$}\NormalTok{Days\_of\_week,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Monday"}\NormalTok{, }\StringTok{"Tuesday"}\NormalTok{, }\StringTok{"Wednesday"}\NormalTok{, }\StringTok{"Thursday"}\NormalTok{, }\StringTok{"Friday"}\NormalTok{, }\StringTok{"Saturday"}\NormalTok{, }\StringTok{"Sunday"}\NormalTok{))}
+\NormalTok{calories\_data}\SpecialCharTok{$}\NormalTok{Total}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(calories\_data}\SpecialCharTok{$}\NormalTok{Total,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"calories\_zero"}\NormalTok{, }\StringTok{"calories\_lessthan1k"}\NormalTok{, }\StringTok{"calories\_between\_1\_3k"}\NormalTok{, }\StringTok{"calories\_morethan\_3k"}\NormalTok{))}
+
+\FunctionTok{head}\NormalTok{(calories\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+##   Days_of_week Total         Value
+##   <ord>        <ord>         <int>
+## 1 Sunday       calories_zero     1
+## 2 Saturday     calories_zero     0
+## 3 Friday       calories_zero     0
+## 4 Thursday     calories_zero     1
+## 5 Wednesday    calories_zero     0
+## 6 Tuesday      calories_zero     2
+\end{verbatim}
+
+Plot for calories
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{calories\_data,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Days\_of\_week,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Steps moved on the basis of days"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Day of Week"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Frequency"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Calories burned by users"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"navyblue"}\NormalTok{, }\StringTok{"blueviolet"}\NormalTok{, }\StringTok{"darkgreen"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Calories burned"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"calories\_zero"}\NormalTok{, }\StringTok{"calories\_lessthan1k"}\NormalTok{, }\StringTok{"calories\_between\_1\_3k"}\NormalTok{, }\StringTok{"calories\_morethan\_3k"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Zero"}\NormalTok{, }\StringTok{"\textless{}1000"}\NormalTok{, }\StringTok{"1000{-}3000"}\NormalTok{,}\StringTok{"\textgreater{}3000"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-18-1.pdf}
+Observations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Among all users, 1000-3000 calories were commonly burned in a day. It
+  was observed to be high on Monday and Sunday.
+\item
+  Significant amount of cases were found to have calories burned above
+  3000 a day.
+\end{enumerate}
+
+HeatMap representation for daily Sedentary Minutes
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(Day\_week, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{norm\_week, }\AttributeTok{y=}\NormalTok{rev\_ord.x, }\AttributeTok{fill =}\NormalTok{ SedentaryMinutes)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id) }\SpecialCharTok{+} \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"yellow"}\NormalTok{, }\AttributeTok{high=}\StringTok{"red"}\NormalTok{) }\SpecialCharTok{+}  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Activity Week"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Day of week"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Weekly Heatmap:Sedentary minutes"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Sedentary Minutes"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{5}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks=}\FunctionTok{round}\NormalTok{(}\FunctionTok{seq}\NormalTok{(}\FunctionTok{min}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week),}\FunctionTok{max}\NormalTok{(Day\_week}\SpecialCharTok{$}\NormalTok{norm\_week),}\AttributeTok{by=}\DecValTok{1}\NormalTok{),}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-19-1.pdf}
+Observations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Users are more Sedentary over the weekends
+\item
+  Users are least Sedentary on Tuesdays and Fridays.
+\end{enumerate}
+
+Days with most Sedentary Minutes
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sedentary\_data}\OtherTok{\textless{}{-}}\NormalTok{Day\_week}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(}\AttributeTok{Days\_of\_week=}\NormalTok{rev\_ord.x)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{sedentary\_zero=}\FunctionTok{sum}\NormalTok{(SedentaryMinutes}\SpecialCharTok{==}\DecValTok{0}\NormalTok{),}\AttributeTok{sedentary\_lessthan500=}\FunctionTok{sum}\NormalTok{(SedentaryMinutes}\SpecialCharTok{\textless{}}\DecValTok{1000}\NormalTok{),  }\AttributeTok{sedentary\_between\_500\_1k=}\NormalTok{(}\FunctionTok{sum}\NormalTok{(SedentaryMinutes}\SpecialCharTok{\textgreater{}}\DecValTok{500}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{sum}\NormalTok{(SedentaryMinutes}\SpecialCharTok{\textgreater{}}\DecValTok{1000}\NormalTok{)), }\AttributeTok{sedentary\_morethan\_1k=}\FunctionTok{sum}\NormalTok{(SedentaryMinutes}\SpecialCharTok{\textgreater{}}\DecValTok{1000}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total, Value,}\SpecialCharTok{{-}}\NormalTok{Days\_of\_week)}
+\NormalTok{sedentary\_data}\SpecialCharTok{$}\NormalTok{Days\_of\_week}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(sedentary\_data}\SpecialCharTok{$}\NormalTok{Days\_of\_week,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Monday"}\NormalTok{, }\StringTok{"Tuesday"}\NormalTok{, }\StringTok{"Wednesday"}\NormalTok{, }\StringTok{"Thursday"}\NormalTok{, }\StringTok{"Friday"}\NormalTok{, }\StringTok{"Saturday"}\NormalTok{, }\StringTok{"Sunday"}\NormalTok{))}
+\NormalTok{sedentary\_data}\SpecialCharTok{$}\NormalTok{Total}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(sedentary\_data}\SpecialCharTok{$}\NormalTok{Total,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"sedentary\_zero"}\NormalTok{, }\StringTok{"sedentary\_lessthan500"}\NormalTok{, }\StringTok{"sedentary\_between\_500\_1k"}\NormalTok{, }\StringTok{"sedentary\_morethan\_1k"}\NormalTok{))}
+
+\FunctionTok{head}\NormalTok{(sedentary\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+##   Days_of_week Total          Value
+##   <ord>        <ord>          <int>
+## 1 Sunday       sedentary_zero     0
+## 2 Saturday     sedentary_zero     0
+## 3 Friday       sedentary_zero     0
+## 4 Thursday     sedentary_zero     0
+## 5 Wednesday    sedentary_zero     0
+## 6 Tuesday      sedentary_zero     1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{sedentary\_data,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Days\_of\_week,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Sedentary minutes on the basis of days"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Day of Week"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Frequency"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Sedentary Minutes range"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"lightblue"}\NormalTok{, }\StringTok{"blueviolet"}\NormalTok{, }\StringTok{"darkgreen"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Sedentary minutes"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"sedentary\_zero"}\NormalTok{, }\StringTok{"sedentary\_lessthan500"}\NormalTok{, }\StringTok{"sedentary\_between\_500\_1k"}\NormalTok{, }\StringTok{"sedentary\_morethan\_1k"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Zero"}\NormalTok{, }\StringTok{"\textless{}500"}\NormalTok{, }\StringTok{"500{-}1000"}\NormalTok{,}\StringTok{"\textgreater{}1000"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-21-1.pdf}
+
+Understanding the daily intensities of activity of each user
+
+Plotting daily Intensities of each user
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Active\_Intensities}\OtherTok{\textless{}{-}}\NormalTok{Day\_week}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total,Value,}\SpecialCharTok{{-}}\NormalTok{TotalSteps,}\SpecialCharTok{{-}}\NormalTok{TotalDistance,}\SpecialCharTok{{-}}\NormalTok{SedentaryMinutes,}\SpecialCharTok{{-}}\NormalTok{ActivityDate,}\SpecialCharTok{{-}}\NormalTok{Id,}\SpecialCharTok{{-}}\NormalTok{day\_of\_week,}\SpecialCharTok{{-}}\NormalTok{rev\_ord.x,}\SpecialCharTok{{-}}\NormalTok{week\_no,}\SpecialCharTok{{-}}\NormalTok{norm\_week,}\SpecialCharTok{{-}}\NormalTok{LightActiveDistance,}\SpecialCharTok{{-}}\NormalTok{ModeratelyActiveDistance,}\SpecialCharTok{{-}}\NormalTok{LightActiveDistance,}\SpecialCharTok{{-}}\NormalTok{VeryActiveDistance,}\SpecialCharTok{{-}}\NormalTok{Calories)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{Active\_Intensities,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{ActivityDate,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size =}\DecValTok{5}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Daily Active Minutes of Fitbit Users"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Activity Date"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Daily Active Minutes"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Types of Active Minutes"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"\#FF6600"}\NormalTok{, }\StringTok{"\#66FFFF"}\NormalTok{, }\StringTok{"\#0000FF"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Types of Active Minutes"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"LightlyActiveMinutes"}\NormalTok{, }\StringTok{"ModeratelyActiveMinutes"}\NormalTok{, }\StringTok{"VeryActiveMinutes"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Lightly Active Minutes"}\NormalTok{, }\StringTok{"Moderately Active Minutes"}\NormalTok{, }\StringTok{"Very Active Minutes"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-23-1.pdf}
+Observations: 1. Almost all users were lightly active suggesting they
+keep moving throughout the day 2. About 12 users were consistently very
+active throughout the duration of the study
+
+Summarizing daily data of each user using pivot tables
+
+Creating a pivot table to summarize activity of each user Deleting
+irrelevant information from Day\_week dataframe Keeping relevant column
+from the existing dataframes and analyzing the results from pivot table
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{daily\_activity1}\OtherTok{\textless{}{-}}\NormalTok{Day\_week}\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{day\_of\_week,}\SpecialCharTok{{-}}\NormalTok{rev\_ord.x,}\SpecialCharTok{{-}}\NormalTok{week\_no,}\SpecialCharTok{{-}}\NormalTok{norm\_week)}
+\FunctionTok{str}\NormalTok{(daily\_activity1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    940 obs. of  12 variables:
+##  $ Id                      : chr  "1503960366" "1503960366" "1503960366" "1503960366" ...
+##  $ ActivityDate            : Date, format: "2020-04-12" "2020-04-13" ...
+##  $ TotalSteps              : num  13162 10735 10460 9762 12669 ...
+##  $ TotalDistance           : num  8.5 6.97 6.74 6.28 8.16 ...
+##  $ VeryActiveDistance      : num  1.88 1.57 2.44 2.14 2.71 ...
+##  $ ModeratelyActiveDistance: num  0.55 0.69 0.4 1.26 0.41 ...
+##  $ LightActiveDistance     : num  6.06 4.71 3.91 2.83 5.04 ...
+##  $ VeryActiveMinutes       : num  25 21 30 29 36 38 42 50 28 19 ...
+##  $ ModeratelyActiveMinutes : num  13 19 11 34 10 20 16 31 12 8 ...
+##  $ LightlyActiveMinutes    : num  328 217 181 209 221 164 233 264 205 211 ...
+##  $ SedentaryMinutes        : num  728 776 1218 726 773 ...
+##  $ Calories                : num  1985 1797 1776 1745 1863 ...
+\end{verbatim}
+
+Pivot table to summarize average activity per day of each user
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lessR) }\CommentTok{\# package to compute pivot tables}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## lessR 4.1.8                         feedback: gerbing@pdx.edu 
+## --------------------------------------------------------------
+## > d <- Read("")   Read text, Excel, SPSS, SAS, or R data file
+##   d is default data frame, data= in analysis routines optional
+## 
+## Learn about reading, writing, and manipulating data, graphics,
+## testing means and proportions, regression, factor analysis,
+## customization, and descriptive statistics from pivot tables.
+##   Enter:  browseVignettes("lessR")
+## 
+## View changes in this or recent versions of lessR.
+##   Enter: help(package=lessR)  Click: Package NEWS
+##   Enter: interact()  for access to interactive graphics
+##   New function: reshape_long() to move data from wide to long
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'lessR'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:dplyr':
+## 
+##     recode, rename
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pivot\_daily\_activity}\OtherTok{\textless{}{-}}\FunctionTok{pivot}\NormalTok{(}\AttributeTok{data=}\NormalTok{daily\_activity1,mean,}\FunctionTok{c}\NormalTok{(TotalSteps,TotalDistance, VeryActiveDistance, ModeratelyActiveDistance,LightActiveDistance, VeryActiveMinutes,ModeratelyActiveMinutes, LightlyActiveMinutes, SedentaryMinutes,Calories),}\AttributeTok{by=}\NormalTok{Id)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(pivot\_daily\_activity)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    33 obs. of  31 variables:
+##  $ Id                           : Factor w/ 33 levels "1503960366","1624580081",..: 1 2 3 4 5 6 7 8 9 10 ...
+##  $ TotalSteps_n                 : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ TotalSteps_na                : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ TotalSteps_mean              : num  12117 5744 7283 2580 916 ...
+##  $ TotalDistance_n              : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ TotalDistance_na             : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ TotalDistance_mean           : num  7.81 3.915 5.295 1.706 0.635 ...
+##  $ VeryActiveDistance_n         : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ VeryActiveDistance_na        : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ VeryActiveDistance_mean      : num  2.858 0.939 0.73 0.008 0.096 ...
+##  $ ModeratelyActiveDistance_n   : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ ModeratelyActiveDistance_na  : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ ModeratelyActiveDistance_mean: num  0.794 0.361 0.951 0.049 0.031 ...
+##  $ LightActiveDistance_n        : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ LightActiveDistance_na       : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ LightActiveDistance_mean     : num  4.153 2.607 3.609 1.647 0.507 ...
+##  $ VeryActiveMinutes_n          : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ VeryActiveMinutes_na         : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ VeryActiveMinutes_mean       : num  38.71 8.677 9.567 0.129 1.323 ...
+##  $ ModeratelyActiveMinutes_n    : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ ModeratelyActiveMinutes_na   : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ ModeratelyActiveMinutes_mean : num  19.161 5.806 21.367 1.29 0.774 ...
+##  $ LightlyActiveMinutes_n       : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ LightlyActiveMinutes_na      : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ LightlyActiveMinutes_mean    : num  219.9 153.5 178.5 115.5 38.6 ...
+##  $ SedentaryMinutes_n           : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ SedentaryMinutes_na          : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ SedentaryMinutes_mean        : num  848 1258 1162 1207 1317 ...
+##  $ Calories_n                   : num  31 31 30 31 31 31 31 31 18 31 ...
+##  $ Calories_na                  : num  0 0 0 0 0 0 0 0 0 0 ...
+##  $ Calories_mean                : num  1816 1483 2811 1573 2173 ...
+\end{verbatim}
+
+Number of days/data by each user
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(epiDisplay)}\CommentTok{\#package for histogram}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: foreign
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: survival
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MASS
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'MASS'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:dplyr':
+## 
+##     select
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: nnet
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'epiDisplay'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:ggplot2':
+## 
+##     alpha
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tab1}\NormalTok{(pivot\_daily\_activity}\SpecialCharTok{$}\NormalTok{TotalSteps\_n, }\AttributeTok{cum.percent =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{main =} \StringTok{\textquotesingle{}Number of daily activity data provided by users\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Number of days of activity\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+\begin{verbatim}
+## pivot_daily_activity$TotalSteps_n : 
+##         Frequency Percent Cum. percent
+## 4               1     3.0          3.0
+## 18              1     3.0          6.1
+## 19              1     3.0          9.1
+## 20              1     3.0         12.1
+## 26              2     6.1         18.2
+## 28              1     3.0         21.2
+## 29              2     6.1         27.3
+## 30              3     9.1         36.4
+## 31             21    63.6        100.0
+##   Total        33   100.0        100.0
+\end{verbatim}
+
+Observations: 1. About 29 users consistently used the fitbit device for
+over 26 days 2. About 21 users used the Fitbit device for 31 days
+
+Bar chart for different summarized variables
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pivot\_daily\_activity\_refined }\OtherTok{\textless{}{-}}\NormalTok{ pivot\_daily\_activity}\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{TotalSteps\_n,}\SpecialCharTok{{-}}\NormalTok{TotalSteps\_na,}\SpecialCharTok{{-}}\NormalTok{TotalDistance\_n,}\SpecialCharTok{{-}}\NormalTok{TotalDistance\_na,}\SpecialCharTok{{-}}\NormalTok{VeryActiveDistance\_n,}\SpecialCharTok{{-}}\NormalTok{VeryActiveDistance\_na,}\SpecialCharTok{{-}}\NormalTok{ModeratelyActiveDistance\_n,}\SpecialCharTok{{-}}\NormalTok{ModeratelyActiveDistance\_na,}\SpecialCharTok{{-}}\NormalTok{LightActiveDistance\_n,}\SpecialCharTok{{-}}\NormalTok{LightActiveDistance\_na,}\SpecialCharTok{{-}}\NormalTok{VeryActiveMinutes\_n,}\SpecialCharTok{{-}}\NormalTok{VeryActiveMinutes\_na,}\SpecialCharTok{{-}}\NormalTok{ModeratelyActiveMinutes\_n,}\SpecialCharTok{{-}}\NormalTok{ModeratelyActiveMinutes\_na,}\SpecialCharTok{{-}}\NormalTok{LightlyActiveMinutes\_n,}\SpecialCharTok{{-}}\NormalTok{LightlyActiveMinutes\_na,}\SpecialCharTok{{-}}\NormalTok{SedentaryMinutes\_n,}\SpecialCharTok{{-}}\NormalTok{SedentaryMinutes\_na,}\SpecialCharTok{{-}}\NormalTok{Calories\_n,}\SpecialCharTok{{-}}\NormalTok{Calories\_na)}
+
+\FunctionTok{str}\NormalTok{(pivot\_daily\_activity\_refined)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    33 obs. of  11 variables:
+##  $ Id                           : Factor w/ 33 levels "1503960366","1624580081",..: 1 2 3 4 5 6 7 8 9 10 ...
+##  $ TotalSteps_mean              : num  12117 5744 7283 2580 916 ...
+##  $ TotalDistance_mean           : num  7.81 3.915 5.295 1.706 0.635 ...
+##  $ VeryActiveDistance_mean      : num  2.858 0.939 0.73 0.008 0.096 ...
+##  $ ModeratelyActiveDistance_mean: num  0.794 0.361 0.951 0.049 0.031 ...
+##  $ LightActiveDistance_mean     : num  4.153 2.607 3.609 1.647 0.507 ...
+##  $ VeryActiveMinutes_mean       : num  38.71 8.677 9.567 0.129 1.323 ...
+##  $ ModeratelyActiveMinutes_mean : num  19.161 5.806 21.367 1.29 0.774 ...
+##  $ LightlyActiveMinutes_mean    : num  219.9 153.5 178.5 115.5 38.6 ...
+##  $ SedentaryMinutes_mean        : num  848 1258 1162 1207 1317 ...
+##  $ Calories_mean                : num  1816 1483 2811 1573 2173 ...
+\end{verbatim}
+
+Create data to get histogram for steps, minutes, Calories
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{TotalDistance\_mean, }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{), }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{15}\NormalTok{),}\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{9}\NormalTok{), }\AttributeTok{main=}\StringTok{\textquotesingle{}Histogram: Average daily distance\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Distance\textquotesingle{}}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{LightActiveDistance\_mean, }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{VeryActiveDistance\_mean, }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{5}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{ModeratelyActiveDistance\_mean,  }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"white"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{1}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{\textquotesingle{}topright\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Total Distance\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Very Active Distance\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Moderately Active Distance\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Lightly Active Distance\textquotesingle{}}\NormalTok{), }\AttributeTok{fill=}\FunctionTok{c}\NormalTok{(yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{9}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{5}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \FloatTok{0.5}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"white"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{1}\NormalTok{)), }\AttributeTok{title=}\StringTok{"Daily Average"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-30-1.pdf}
+Observations: Unit of distance was not provided in the data. it could
+most likely be in miles. 1. About 10 users moved a daily distance of 5
+units 2. About 19 users moved a very actively for 1 units daily 3. About
+24 users moved moderately for an average distance of 4 units daily
+
+Average minutes of daily activity by user
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{SedentaryMinutes\_mean, }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{), }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1440}\NormalTok{),}\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"grey"}\NormalTok{, }\AttributeTok{trans.val =} \DecValTok{0}\NormalTok{), }\AttributeTok{main=}\StringTok{\textquotesingle{}Histogram: Average daily activity in minutes\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Minutes\textquotesingle{}}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{LightlyActiveMinutes\_mean, }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{VeryActiveMinutes\_mean, }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{5}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{ModeratelyActiveMinutes\_mean,  }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"white"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{2}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{\textquotesingle{}topright\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Sedentary\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Very Active\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Moderately Active\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Lightly Active\textquotesingle{}}\NormalTok{), }\AttributeTok{fill=}\FunctionTok{c}\NormalTok{(yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"grey"}\NormalTok{, }\AttributeTok{trans.val =} \DecValTok{0}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{5}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \FloatTok{0.5}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"white"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{2}\NormalTok{)), }\AttributeTok{title=}\StringTok{"Daily Average"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-31-1.pdf}
+Excluding the sedentary minutes
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{SedentaryMinutes\_mean, }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{), }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{400}\NormalTok{),}\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"grey"}\NormalTok{, }\AttributeTok{trans.val =} \DecValTok{0}\NormalTok{), }\AttributeTok{main=}\StringTok{\textquotesingle{}Histogram: Average daily activity in minutes\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Minutes\textquotesingle{}}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{LightlyActiveMinutes\_mean, }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{VeryActiveMinutes\_mean, }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{5}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{ModeratelyActiveMinutes\_mean,  }\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"white"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{2}\NormalTok{), }\AttributeTok{add=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{\textquotesingle{}topright\textquotesingle{}}\NormalTok{, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Sedentary\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Very Active\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Moderately Active\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Lightly Active\textquotesingle{}}\NormalTok{), }\AttributeTok{fill=}\FunctionTok{c}\NormalTok{(yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"grey"}\NormalTok{, }\AttributeTok{trans.val =} \DecValTok{0}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{5}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \FloatTok{0.5}\NormalTok{), yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"white"}\NormalTok{, }\AttributeTok{trans.val =}\NormalTok{ .}\DecValTok{2}\NormalTok{)), }\AttributeTok{title=}\StringTok{"Daily Average"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-32-1.pdf}
+Observations: 1. On an average users were moderately active for 200
+minutes daily 2. Most users were very active for 10 minutes daily 3.
+Moderate activity seemed common among users 4. User activity showing
+long sedentary minutes suggests that they wore the fitness device to
+work and sleep.
+
+Histogram of steps per day
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{TotalSteps\_mean, }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{10}\NormalTok{), }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20000}\NormalTok{),}\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\AttributeTok{trans.val =} \DecValTok{0}\NormalTok{), }\AttributeTok{main=}\StringTok{\textquotesingle{}Histogram: Average daily steps\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Average Daily Steps\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-33-1.pdf}
+Observations: Average daily steps of users was \textasciitilde7500.
+
+Average daily Calories
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(pivot\_daily\_activity\_refined}\SpecialCharTok{$}\NormalTok{Calories\_mean, }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{10}\NormalTok{), }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{1000}\NormalTok{,}\DecValTok{4000}\NormalTok{),}\AttributeTok{col=}\NormalTok{yarrr}\SpecialCharTok{::}\FunctionTok{transparent}\NormalTok{(}\StringTok{"orange"}\NormalTok{, }\AttributeTok{trans.val =} \DecValTok{0}\NormalTok{), }\AttributeTok{main=}\StringTok{\textquotesingle{}Histogram: Average daily calories\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Average Daily Calories\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-34-1.pdf}
+Observations: Users burned \textasciitilde2500 calories daily
+
+Relation between average total steps and average calories
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{pivot\_daily\_activity\_refined)}\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{mapping=}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Calories\_mean, }\AttributeTok{y=}\NormalTok{TotalSteps\_mean))}\SpecialCharTok{+}
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Average calories"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Average daily steps"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Relation between the average daily calories and average daily steps"}\NormalTok{)}\SpecialCharTok{+}\FunctionTok{xlim}\NormalTok{(}\DecValTok{1000}\NormalTok{,}\DecValTok{4000}\NormalTok{)}\SpecialCharTok{+}\FunctionTok{ylim}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-35-1.pdf}
+Observations: Average calories burned daily and average daily steps do
+not have a linear relationship suggesting there are other factors
+influencing the calories burned daily.
+
+Correlation plot: This plotting is done to find the relation between
+various parameters
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggcorrplot)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cor\_plot}\OtherTok{\textless{}{-}}\NormalTok{dplyr}\SpecialCharTok{::}\FunctionTok{select\_if}\NormalTok{(pivot\_daily\_activity\_refined,is.numeric)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{correlation\_average\_daily\_activity}\OtherTok{\textless{}{-}}\FunctionTok{cor}\NormalTok{(cor\_plot, }\AttributeTok{use=}\StringTok{"complete.obs"}\NormalTok{)}
+\FunctionTok{round}\NormalTok{(correlation\_average\_daily\_activity,}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                               TotalSteps_mean TotalDistance_mean
+## TotalSteps_mean                          1.00               0.98
+## TotalDistance_mean                       0.98               1.00
+## VeryActiveDistance_mean                  0.78               0.82
+## ModeratelyActiveDistance_mean            0.49               0.45
+## LightActiveDistance_mean                 0.72               0.72
+## VeryActiveMinutes_mean                   0.70               0.73
+## ModeratelyActiveMinutes_mean             0.48               0.44
+## LightlyActiveMinutes_mean                0.51               0.45
+## SedentaryMinutes_mean                   -0.39              -0.32
+## Calories_mean                            0.44               0.55
+##                               VeryActiveDistance_mean
+## TotalSteps_mean                                  0.78
+## TotalDistance_mean                               0.82
+## VeryActiveDistance_mean                          1.00
+## ModeratelyActiveDistance_mean                    0.16
+## LightActiveDistance_mean                         0.25
+## VeryActiveMinutes_mean                           0.89
+## ModeratelyActiveMinutes_mean                     0.22
+## LightlyActiveMinutes_mean                        0.03
+## SedentaryMinutes_mean                           -0.04
+## Calories_mean                                    0.51
+##                               ModeratelyActiveDistance_mean
+## TotalSteps_mean                                        0.49
+## TotalDistance_mean                                     0.45
+## VeryActiveDistance_mean                                0.16
+## ModeratelyActiveDistance_mean                          1.00
+## LightActiveDistance_mean                               0.26
+## VeryActiveMinutes_mean                                 0.18
+## ModeratelyActiveMinutes_mean                           0.96
+## LightlyActiveMinutes_mean                              0.12
+## SedentaryMinutes_mean                                 -0.40
+## Calories_mean                                          0.06
+##                               LightActiveDistance_mean VeryActiveMinutes_mean
+## TotalSteps_mean                                   0.72                   0.70
+## TotalDistance_mean                                0.72                   0.73
+## VeryActiveDistance_mean                           0.25                   0.89
+## ModeratelyActiveDistance_mean                     0.26                   0.18
+## LightActiveDistance_mean                          1.00                   0.21
+## VeryActiveMinutes_mean                            0.21                   1.00
+## ModeratelyActiveMinutes_mean                      0.19                   0.31
+## LightlyActiveMinutes_mean                         0.83                   0.00
+## SedentaryMinutes_mean                            -0.45                  -0.20
+## Calories_mean                                     0.35                   0.63
+##                               ModeratelyActiveMinutes_mean
+## TotalSteps_mean                                       0.48
+## TotalDistance_mean                                    0.44
+## VeryActiveDistance_mean                               0.22
+## ModeratelyActiveDistance_mean                         0.96
+## LightActiveDistance_mean                              0.19
+## VeryActiveMinutes_mean                                0.31
+## ModeratelyActiveMinutes_mean                          1.00
+## LightlyActiveMinutes_mean                             0.03
+## SedentaryMinutes_mean                                -0.39
+## Calories_mean                                         0.16
+##                               LightlyActiveMinutes_mean SedentaryMinutes_mean
+## TotalSteps_mean                                    0.51                 -0.39
+## TotalDistance_mean                                 0.45                 -0.32
+## VeryActiveDistance_mean                            0.03                 -0.04
+## ModeratelyActiveDistance_mean                      0.12                 -0.40
+## LightActiveDistance_mean                           0.83                 -0.45
+## VeryActiveMinutes_mean                             0.00                 -0.20
+## ModeratelyActiveMinutes_mean                       0.03                 -0.39
+## LightlyActiveMinutes_mean                          1.00                 -0.44
+## SedentaryMinutes_mean                             -0.44                  1.00
+## Calories_mean                                      0.00                 -0.08
+##                               Calories_mean
+## TotalSteps_mean                        0.44
+## TotalDistance_mean                     0.55
+## VeryActiveDistance_mean                0.51
+## ModeratelyActiveDistance_mean          0.06
+## LightActiveDistance_mean               0.35
+## VeryActiveMinutes_mean                 0.63
+## ModeratelyActiveMinutes_mean           0.16
+## LightlyActiveMinutes_mean              0.00
+## SedentaryMinutes_mean                 -0.08
+## Calories_mean                          1.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggcorrplot}\NormalTok{(correlation\_average\_daily\_activity)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-39-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggcorrplot}\NormalTok{(correlation\_average\_daily\_activity, }
+           \AttributeTok{hc.order =} \ConstantTok{TRUE}\NormalTok{, }
+           \AttributeTok{type =} \StringTok{"lower"}\NormalTok{,}
+           \AttributeTok{lab =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-40-1.pdf}
+Observations:
+
+This plot establishes a linear relationship between: 1. Total distance
+and total steps 2. Lightly active distance and lightly active minutes 3.
+Moderately active distance and moderately active minutes 4. Very active
+distance and very active minutes
+
+Relational scatter plots
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(GGally)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Registered S3 method overwritten by 'GGally':
+##   method from   
+##   +.gg   ggplot2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# custom function for density plot}
+\NormalTok{my\_density }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(data, mapping, ...)\{}
+  \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data, }\AttributeTok{mapping =}\NormalTok{ mapping) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_density}\NormalTok{(}\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{,}
+                 \AttributeTok{fill =} \StringTok{"cornflowerblue"}\NormalTok{, ...)}
+\NormalTok{\}}
+
+\CommentTok{\# custom function for scatterplot}
+\NormalTok{my\_scatter }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(data, mapping, ...)\{}
+  \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ data, }\AttributeTok{mapping =}\NormalTok{ mapping) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{,}
+               \AttributeTok{color =} \StringTok{"cornflowerblue"}\NormalTok{) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method=}\NormalTok{lm, }
+                \AttributeTok{se=}\ConstantTok{FALSE}\NormalTok{, ...)}
+\NormalTok{\}}
+
+
+\CommentTok{\# create scatterplot matrix}
+\FunctionTok{ggpairs}\NormalTok{(cor\_plot, }
+        \AttributeTok{lower=}\FunctionTok{list}\NormalTok{(}\AttributeTok{continuous =}\NormalTok{ my\_scatter), }
+        \AttributeTok{diag =} \FunctionTok{list}\NormalTok{(}\AttributeTok{continuous =}\NormalTok{ my\_density)) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Average Daily Activity"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `geom_smooth()` using formula 'y ~ x'
+\end{verbatim}
+
+\begin{verbatim}
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+## `geom_smooth()` using formula 'y ~ x'
+\end{verbatim}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-41-1.pdf}
+Observations: This graph verifies observations from the previus
+correlation graph
+
+Hourly intensities heatmap very plotted and analyzed to know the
+probable time that a user is most likely to do activities
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hourly\_intensities}\OtherTok{\textless{}{-}}\FunctionTok{read\_csv}\NormalTok{(}\StringTok{"/Users/sweta/Documents/Courses/Google Data Analytics/8\_Capstone\_project/3684007/Fitbit\_data/hourlyIntensities\_merged.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 22099 Columns: 4
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (1): ActivityHour
+## dbl (3): Id, TotalIntensity, AverageIntensity
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{glimpse}\NormalTok{(hourly\_intensities)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 22,099
+## Columns: 4
+## $ Id               <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 15039~
+## $ ActivityHour     <chr> "4/12/2016 12:00:00 AM", "4/12/2016 1:00:00 AM", "4/1~
+## $ TotalIntensity   <dbl> 20, 8, 7, 0, 0, 0, 0, 0, 13, 30, 29, 12, 11, 6, 36, 5~
+## $ AverageIntensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.0~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{time\_intensities}\OtherTok{\textless{}{-}}\NormalTok{hourly\_intensities}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{transform}\NormalTok{(}\AttributeTok{Date\_time=}\FunctionTok{mdy\_hms}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(hourly\_intensities}\SpecialCharTok{$}\NormalTok{ActivityHour)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(time\_intensities)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    22099 obs. of  5 variables:
+##  $ Id              : num  1503960366 1503960366 1503960366 1503960366 1503960366 ...
+##  $ ActivityHour    : chr  "4/12/2016 12:00:00 AM" "4/12/2016 1:00:00 AM" "4/12/2016 2:00:00 AM" "4/12/2016 3:00:00 AM" ...
+##  $ TotalIntensity  : num  20 8 7 0 0 0 0 0 13 30 ...
+##  $ AverageIntensity: num  0.333 0.133 0.117 0 0 ...
+##  $ Date_time       : POSIXct, format: "2016-04-12 00:00:00" "2016-04-12 01:00:00" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{time\_intensities}\SpecialCharTok{$}\NormalTok{date}\OtherTok{\textless{}{-}}\FunctionTok{as.Date}\NormalTok{(time\_intensities}\SpecialCharTok{$}\NormalTok{Date\_time)}
+
+\NormalTok{time\_intensities}\SpecialCharTok{$}\NormalTok{time}\OtherTok{\textless{}{-}}\FunctionTok{format}\NormalTok{(}\FunctionTok{as.POSIXct}\NormalTok{(time\_intensities}\SpecialCharTok{$}\NormalTok{Date\_time),}\AttributeTok{format=}\StringTok{"\%H:\%M:\%S"}\NormalTok{)}
+
+\FunctionTok{str}\NormalTok{(time\_intensities)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    22099 obs. of  7 variables:
+##  $ Id              : num  1503960366 1503960366 1503960366 1503960366 1503960366 ...
+##  $ ActivityHour    : chr  "4/12/2016 12:00:00 AM" "4/12/2016 1:00:00 AM" "4/12/2016 2:00:00 AM" "4/12/2016 3:00:00 AM" ...
+##  $ TotalIntensity  : num  20 8 7 0 0 0 0 0 13 30 ...
+##  $ AverageIntensity: num  0.333 0.133 0.117 0 0 ...
+##  $ Date_time       : POSIXct, format: "2016-04-12 00:00:00" "2016-04-12 01:00:00" ...
+##  $ date            : Date, format: "2016-04-12" "2016-04-12" ...
+##  $ time            : chr  "00:00:00" "01:00:00" "02:00:00" "03:00:00" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{glimpse}\NormalTok{(time\_intensities)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 22,099
+## Columns: 7
+## $ Id               <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 15039~
+## $ ActivityHour     <chr> "4/12/2016 12:00:00 AM", "4/12/2016 1:00:00 AM", "4/1~
+## $ TotalIntensity   <dbl> 20, 8, 7, 0, 0, 0, 0, 0, 13, 30, 29, 12, 11, 6, 36, 5~
+## $ AverageIntensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.0~
+## $ Date_time        <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12~
+## $ date             <date> 2016-04-12, 2016-04-12, 2016-04-12, 2016-04-12, 2016~
+## $ time             <chr> "00:00:00", "01:00:00", "02:00:00", "03:00:00", "04:0~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(time\_intensities, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{date, }\AttributeTok{y=}\NormalTok{time, }\AttributeTok{fill =}\NormalTok{ TotalIntensity)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id) }\SpecialCharTok{+} \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"white"}\NormalTok{, }\AttributeTok{high=}\StringTok{"red"}\NormalTok{) }\SpecialCharTok{+}  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Activity Day"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Time of day (hrs)"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Heatmap:Hourly Intensities"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Hourly Intensities"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-48-1.pdf}
+Observations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Each user has a different sleep cycle and exercise regime, so hourly
+  intensities do not project a general trend.
+\item
+  Reading of intensities being close to zero from \textasciitilde12 am
+  -7 am suggests users use fitbit even while sleeping
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hourly\_intensity\_data}\OtherTok{\textless{}{-}}\NormalTok{time\_intensities}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(}\AttributeTok{hour\_of\_day=}\NormalTok{time)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{hour\_zero=}\FunctionTok{sum}\NormalTok{(TotalIntensity}\SpecialCharTok{==}\DecValTok{0}\NormalTok{),}\AttributeTok{intensity\_lessthan50=}\FunctionTok{sum}\NormalTok{(TotalIntensity}\SpecialCharTok{\textless{}}\DecValTok{50}\NormalTok{),  }\AttributeTok{intensity\_between\_50\_100=}\NormalTok{(}\FunctionTok{sum}\NormalTok{(TotalIntensity}\SpecialCharTok{\textgreater{}}\DecValTok{50}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{sum}\NormalTok{(TotalIntensity}\SpecialCharTok{\textgreater{}}\DecValTok{100}\NormalTok{)), }\AttributeTok{intensity\_morethan\_1k=}\FunctionTok{sum}\NormalTok{(TotalIntensity}\SpecialCharTok{\textgreater{}}\DecValTok{100}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total, Value,}\SpecialCharTok{{-}}\NormalTok{hour\_of\_day)}
+\NormalTok{hourly\_intensity\_data}\SpecialCharTok{$}\NormalTok{Total}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(hourly\_intensity\_data}\SpecialCharTok{$}\NormalTok{Total,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"hour\_zero"}\NormalTok{, }\StringTok{"intensity\_lessthan50"}\NormalTok{, }\StringTok{"intensity\_between\_50\_100"}\NormalTok{, }\StringTok{"intensity\_morethan\_1k"}\NormalTok{))}
+
+\FunctionTok{head}\NormalTok{(hourly\_intensity\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+##   hour_of_day Total     Value
+##   <chr>       <ord>     <int>
+## 1 00:00:00    hour_zero   616
+## 2 01:00:00    hour_zero   701
+## 3 02:00:00    hour_zero   730
+## 4 03:00:00    hour_zero   792
+## 5 04:00:00    hour_zero   788
+## 6 05:00:00    hour_zero   729
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{hourly\_intensity\_data,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{hour\_of\_day,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Hourly Intensities"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Time of day"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Frequency"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Intensity range"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"lightblue"}\NormalTok{, }\StringTok{"blueviolet"}\NormalTok{, }\StringTok{"darkgreen"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Intensity"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"hour\_zero"}\NormalTok{, }\StringTok{"intensity\_lessthan50"}\NormalTok{, }\StringTok{"intensity\_between\_50\_100"}\NormalTok{, }\StringTok{"intensity\_morethan\_1k"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Zero"}\NormalTok{, }\StringTok{"\textless{}50"}\NormalTok{, }\StringTok{"50{-}100"}\NormalTok{,}\StringTok{"\textgreater{}100"}\NormalTok{))}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-50-1.pdf}
+
+Hourly steps
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hourlySteps\_merged }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"/Users/sweta/Documents/Courses/Google Data Analytics/8\_Capstone\_project/3684007/Fitbit\_data/hourlySteps\_merged.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 22099 Columns: 3
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (1): ActivityHour
+## dbl (2): Id, StepTotal
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(hourlySteps\_merged)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+##           Id ActivityHour          StepTotal
+##        <dbl> <chr>                     <dbl>
+## 1 1503960366 4/12/2016 12:00:00 AM       373
+## 2 1503960366 4/12/2016 1:00:00 AM        160
+## 3 1503960366 4/12/2016 2:00:00 AM        151
+## 4 1503960366 4/12/2016 3:00:00 AM          0
+## 5 1503960366 4/12/2016 4:00:00 AM          0
+## 6 1503960366 4/12/2016 5:00:00 AM          0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(hourlySteps\_merged)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## spec_tbl_df [22,099 x 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Id          : num [1:22099] 1503960366 1503960366 1503960366 1503960366 1503960366 ...
+##  $ ActivityHour: chr [1:22099] "4/12/2016 12:00:00 AM" "4/12/2016 1:00:00 AM" "4/12/2016 2:00:00 AM" "4/12/2016 3:00:00 AM" ...
+##  $ StepTotal   : num [1:22099] 373 160 151 0 0 ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   Id = col_double(),
+##   ..   ActivityHour = col_character(),
+##   ..   StepTotal = col_double()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hourlySteps}\OtherTok{\textless{}{-}}\NormalTok{hourlySteps\_merged}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{transform}\NormalTok{(}\AttributeTok{Date\_time=}\FunctionTok{mdy\_hms}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(hourlySteps\_merged}\SpecialCharTok{$}\NormalTok{ActivityHour)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hourlySteps}\SpecialCharTok{$}\NormalTok{date}\OtherTok{\textless{}{-}}\FunctionTok{as.Date}\NormalTok{(hourlySteps}\SpecialCharTok{$}\NormalTok{Date\_time)}
+
+\NormalTok{hourlySteps}\SpecialCharTok{$}\NormalTok{time}\OtherTok{\textless{}{-}}\FunctionTok{format}\NormalTok{(}\FunctionTok{as.POSIXct}\NormalTok{(hourlySteps}\SpecialCharTok{$}\NormalTok{Date\_time),}\AttributeTok{format=}\StringTok{"\%H:\%M:\%S"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(hourlySteps)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    22099 obs. of  6 variables:
+##  $ Id          : num  1503960366 1503960366 1503960366 1503960366 1503960366 ...
+##  $ ActivityHour: chr  "4/12/2016 12:00:00 AM" "4/12/2016 1:00:00 AM" "4/12/2016 2:00:00 AM" "4/12/2016 3:00:00 AM" ...
+##  $ StepTotal   : num  373 160 151 0 0 ...
+##  $ Date_time   : POSIXct, format: "2016-04-12 00:00:00" "2016-04-12 01:00:00" ...
+##  $ date        : Date, format: "2016-04-12" "2016-04-12" ...
+##  $ time        : chr  "00:00:00" "01:00:00" "02:00:00" "03:00:00" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{max}\NormalTok{(hourlySteps}\SpecialCharTok{$}\NormalTok{StepTotal)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10554
+\end{verbatim}
+
+Plot for hourly steps
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(hourlySteps, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{date, }\AttributeTok{y=}\NormalTok{time, }\AttributeTok{fill =}\NormalTok{ StepTotal)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id) }\SpecialCharTok{+} \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"white"}\NormalTok{, }\AttributeTok{high=}\StringTok{"blue"}\NormalTok{) }\SpecialCharTok{+}  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Activity Day"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Time of day (hrs)"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Hourly Heatmap:Total Steps"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Hourly Steps"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-58-1.pdf}
+Observations: Similar to the previous heatmap for hourly intensities
+users do not show a common trend in terms of hourly steps
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hourlySteps\_data}\OtherTok{\textless{}{-}}\NormalTok{hourlySteps}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(}\AttributeTok{hour\_of\_day=}\NormalTok{time)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{steps\_zero=}\FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{==}\DecValTok{0}\NormalTok{),}\AttributeTok{steps\_lessthan2500=}\FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{\textless{}}\DecValTok{2500}\NormalTok{),  }\AttributeTok{steps\_between\_2500\_5000=}\NormalTok{(}\FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{\textgreater{}}\DecValTok{2500}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{\textgreater{}}\DecValTok{5000}\NormalTok{)), }\AttributeTok{steps\_between\_5000\_7500=}\NormalTok{(}\FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{\textgreater{}}\DecValTok{5000}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{\textgreater{}}\DecValTok{7500}\NormalTok{)), }\AttributeTok{steps\_morethan\_7500=}\FunctionTok{sum}\NormalTok{(StepTotal}\SpecialCharTok{\textgreater{}}\DecValTok{7500}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{gather}\NormalTok{(Total, Value,}\SpecialCharTok{{-}}\NormalTok{hour\_of\_day)}
+\NormalTok{hourlySteps\_data}\SpecialCharTok{$}\NormalTok{Total}\OtherTok{\textless{}{-}}\FunctionTok{ordered}\NormalTok{(hourlySteps\_data}\SpecialCharTok{$}\NormalTok{Total,  }\AttributeTok{levels=}\FunctionTok{c}\NormalTok{(}\StringTok{"steps\_zero"}\NormalTok{, }\StringTok{"steps\_lessthan2500"}\NormalTok{, }\StringTok{"steps\_between\_2500\_5000"}\NormalTok{, }\StringTok{"steps\_between\_5000\_7500"}\NormalTok{,}\StringTok{"steps\_morethan\_7500"}\NormalTok{))}
+
+\FunctionTok{head}\NormalTok{(hourlySteps\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+##   hour_of_day Total      Value
+##   <chr>       <ord>      <int>
+## 1 00:00:00    steps_zero   633
+## 2 01:00:00    steps_zero   719
+## 3 02:00:00    steps_zero   744
+## 4 03:00:00    steps_zero   800
+## 5 04:00:00    steps_zero   795
+## 6 05:00:00    steps_zero   756
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data=}\NormalTok{hourlySteps\_data,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{hour\_of\_day,}\AttributeTok{y=}\NormalTok{Value,}\AttributeTok{fill=}\NormalTok{Total))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position=}\StringTok{"dodge"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Hourly Steps"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Time of day"}\NormalTok{,}\AttributeTok{y=}\StringTok{"Frequency"}\NormalTok{,}\AttributeTok{caption=}\StringTok{"Fitbit Data by Mobius"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{guides}\NormalTok{(}\AttributeTok{fill=}\FunctionTok{guide\_legend}\NormalTok{(}\AttributeTok{title=}\StringTok{"Steps range"}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"lightblue"}\NormalTok{, }\StringTok{"blueviolet"}\NormalTok{, }\StringTok{"lightgreen"}\NormalTok{,}\StringTok{"darkgreen"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Steps"}\NormalTok{,}\AttributeTok{breaks=}\FunctionTok{c}\NormalTok{(}\StringTok{"steps\_zero"}\NormalTok{, }\StringTok{"steps\_lessthan2500"}\NormalTok{, }\StringTok{"steps\_between\_2500\_5000"}\NormalTok{, }\StringTok{"steps\_between\_5000\_7500"}\NormalTok{,}\StringTok{"steps\_morethan\_7500"}\NormalTok{),}\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Zero"}\NormalTok{, }\StringTok{"\textless{}2500"}\NormalTok{, }\StringTok{"2500{-}5000"}\NormalTok{,}\StringTok{"5000{-}7500"}\NormalTok{,}\StringTok{"\textgreater{}7500"}\NormalTok{))}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{10}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-60-1.pdf}
+
+Sleep time
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{minuteSleep\_merged }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"/Users/sweta/Documents/Courses/Google Data Analytics/8\_Capstone\_project/3684007/Fitbit\_data/minuteSleep\_merged.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 188521 Columns: 4
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (1): date
+## dbl (3): Id, value, logId
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(minuteSleep\_merged)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 4
+##           Id date                 value       logId
+##        <dbl> <chr>                <dbl>       <dbl>
+## 1 1503960366 4/12/2016 2:47:30 AM     3 11380564589
+## 2 1503960366 4/12/2016 2:48:30 AM     2 11380564589
+## 3 1503960366 4/12/2016 2:49:30 AM     1 11380564589
+## 4 1503960366 4/12/2016 2:50:30 AM     1 11380564589
+## 5 1503960366 4/12/2016 2:51:30 AM     1 11380564589
+## 6 1503960366 4/12/2016 2:52:30 AM     1 11380564589
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{minuteSleep}\OtherTok{\textless{}{-}}\NormalTok{minuteSleep\_merged}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{transform}\NormalTok{(}\AttributeTok{Date\_time=}\FunctionTok{mdy\_hms}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(minuteSleep\_merged}\SpecialCharTok{$}\NormalTok{date)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{minuteSleep}\SpecialCharTok{$}\NormalTok{date\_activity}\OtherTok{\textless{}{-}}\FunctionTok{as.Date}\NormalTok{(minuteSleep}\SpecialCharTok{$}\NormalTok{Date\_time)}
+
+\NormalTok{minuteSleep}\SpecialCharTok{$}\NormalTok{time}\OtherTok{\textless{}{-}}\FunctionTok{format}\NormalTok{(}\FunctionTok{as.POSIXct}\NormalTok{(minuteSleep}\SpecialCharTok{$}\NormalTok{Date\_time),}\AttributeTok{format=}\StringTok{"\%H:\%M:\%S"}\NormalTok{)}
+
+\NormalTok{minuteSleep}\SpecialCharTok{$}\NormalTok{time}\OtherTok{\textless{}{-}} \FunctionTok{as.POSIXct}\NormalTok{(minuteSleep}\SpecialCharTok{$}\NormalTok{time, }\AttributeTok{format=}\StringTok{"\%H:\%M:\%S"}\NormalTok{)}
+\NormalTok{minuteSleep}\SpecialCharTok{$}\NormalTok{Id}\OtherTok{\textless{}{-}}\FunctionTok{as.character}\NormalTok{(minuteSleep}\SpecialCharTok{$}\NormalTok{Id)}
+\FunctionTok{str}\NormalTok{(minuteSleep)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    188521 obs. of  7 variables:
+##  $ Id           : chr  "1503960366" "1503960366" "1503960366" "1503960366" ...
+##  $ date         : chr  "4/12/2016 2:47:30 AM" "4/12/2016 2:48:30 AM" "4/12/2016 2:49:30 AM" "4/12/2016 2:50:30 AM" ...
+##  $ value        : num  3 2 1 1 1 1 1 2 2 2 ...
+##  $ logId        : num  11380564589 11380564589 11380564589 11380564589 11380564589 ...
+##  $ Date_time    : POSIXct, format: "2016-04-12 02:47:30" "2016-04-12 02:48:30" ...
+##  $ date_activity: Date, format: "2016-04-12" "2016-04-12" ...
+##  $ time         : POSIXct, format: "2022-05-05 02:47:30" "2022-05-05 02:48:30" ...
+\end{verbatim}
+
+Stats of Sleep data
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Count\_sleepdata }\OtherTok{\textless{}{-}}\NormalTok{ minuteSleep}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(Id,date\_activity)}
+\FunctionTok{head}\NormalTok{(Count\_sleepdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           Id date_activity   n
+## 1 1503960366    2016-04-12 346
+## 2 1503960366    2016-04-13 407
+## 3 1503960366    2016-04-15 442
+## 4 1503960366    2016-04-16 400
+## 5 1503960366    2016-04-17 679
+## 6 1503960366    2016-04-19 320
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SleepCount\_per\_Id}\OtherTok{\textless{}{-}}\NormalTok{Count\_sleepdata}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(Id)}
+\FunctionTok{str}\NormalTok{(SleepCount\_per\_Id)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    24 obs. of  2 variables:
+##  $ Id: chr  "1503960366" "1644430081" "1844505072" "1927972279" ...
+##  $ n : int  25 5 5 8 32 1 18 28 11 29 ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(epiDisplay)}
+\FunctionTok{tab1}\NormalTok{(SleepCount\_per\_Id}\SpecialCharTok{$}\NormalTok{n, }\AttributeTok{cum.percent =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{main =} \StringTok{\textquotesingle{}Number of daily sleep data provided by users\textquotesingle{}}\NormalTok{, }\AttributeTok{xlab=}\StringTok{\textquotesingle{}Number of days of sleep\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-66-1.pdf}
+
+\begin{verbatim}
+## SleepCount_per_Id$n : 
+##         Frequency Percent Cum. percent
+## 1               1     4.2          4.2
+## 2               1     4.2          8.3
+## 3               2     8.3         16.7
+## 5               2     8.3         25.0
+## 8               2     8.3         33.3
+## 11              1     4.2         37.5
+## 15              1     4.2         41.7
+## 18              1     4.2         45.8
+## 21              1     4.2         50.0
+## 25              1     4.2         54.2
+## 26              1     4.2         58.3
+## 27              1     4.2         62.5
+## 28              3    12.5         75.0
+## 29              1     4.2         79.2
+## 31              2     8.3         87.5
+## 32              3    12.5        100.0
+##   Total        24   100.0        100.0
+\end{verbatim}
+
+Observations: 1. Total 24 users provided sleep data of which about 12
+users provided sleep data for 25 days and above. 2. Reason for lower
+data could be : (a) User charges device at night or (b) It is cumbersome
+to use the device while sleeping
+
+Recording of sleep data in terms of Sleep levels
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(minuteSleep, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{date\_activity, }\AttributeTok{y=}\NormalTok{time, }\AttributeTok{fill =}\NormalTok{ value)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\AttributeTok{colour =} \StringTok{"white"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{facet\_grid}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Id) }\SpecialCharTok{+} \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"gray"}\NormalTok{, }\AttributeTok{high=}\StringTok{"blue"}\NormalTok{) }\SpecialCharTok{+}  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Activity Date"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ylab}\NormalTok{(}\StringTok{"Time of day (hrs)"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Sleep monitor"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Sleep levels"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}\FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle=}\DecValTok{90}\NormalTok{,}\AttributeTok{size=}\DecValTok{5}\NormalTok{),}\AttributeTok{axis.text.y =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size=}\DecValTok{10}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_datetime}\NormalTok{(}\AttributeTok{date\_breaks =} \StringTok{"2 hours"}\NormalTok{, }\AttributeTok{date\_labels=}\StringTok{"\%H:\%M"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-67-1.pdf}
+Observations: 1. Users seem to have different sleep hours and duration.
+2. Users seem to consistently sleep between 2-6 am.
+
+Finding out the usage of heart rate data obtained in Fitbit among users
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{heartrate\_seconds\_merged }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"/Users/sweta/Documents/Courses/Google Data Analytics/8\_Capstone\_project/3684007/Fitbit\_data/heartrate\_seconds\_merged.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 2483658 Columns: 3
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (1): Time
+## dbl (2): Id, Value
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(heartrate\_seconds\_merged)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+##           Id Time                 Value
+##        <dbl> <chr>                <dbl>
+## 1 2022484408 4/12/2016 7:21:00 AM    97
+## 2 2022484408 4/12/2016 7:21:05 AM   102
+## 3 2022484408 4/12/2016 7:21:10 AM   105
+## 4 2022484408 4/12/2016 7:21:20 AM   103
+## 5 2022484408 4/12/2016 7:21:25 AM   101
+## 6 2022484408 4/12/2016 7:22:05 AM    95
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{heartrate\_seconds}\OtherTok{\textless{}{-}}\NormalTok{heartrate\_seconds\_merged}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{drop\_na}\NormalTok{()}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{transform}\NormalTok{(}\AttributeTok{Date\_time=}\FunctionTok{mdy\_hms}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(heartrate\_seconds\_merged}\SpecialCharTok{$}\NormalTok{Time)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{heartrate\_seconds}\SpecialCharTok{$}\NormalTok{date\_activity}\OtherTok{\textless{}{-}}\FunctionTok{as.Date}\NormalTok{(heartrate\_seconds}\SpecialCharTok{$}\NormalTok{Date\_time)}
+
+
+\NormalTok{heartrate\_seconds}\SpecialCharTok{$}\NormalTok{Id}\OtherTok{\textless{}{-}}\FunctionTok{as.character}\NormalTok{(heartrate\_seconds}\SpecialCharTok{$}\NormalTok{Id)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Count\_heartdata }\OtherTok{\textless{}{-}}\NormalTok{ heartrate\_seconds}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(Id,date\_activity)}
+\FunctionTok{head}\NormalTok{(Count\_heartdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           Id date_activity    n
+## 1 2022484408    2016-04-12 4836
+## 2 2022484408    2016-04-13 5332
+## 3 2022484408    2016-04-14 5560
+## 4 2022484408    2016-04-15 5302
+## 5 2022484408    2016-04-16 3143
+## 6 2022484408    2016-04-17 4948
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Heartdata\_per\_Id}\OtherTok{\textless{}{-}}\NormalTok{Count\_heartdata}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(Id)}
+\FunctionTok{str}\NormalTok{(Heartdata\_per\_Id)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    14 obs. of  2 variables:
+##  $ Id: chr  "2022484408" "2026352035" "2347167796" "4020332650" ...
+##  $ n : int  31 4 18 16 30 31 31 28 23 18 ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tab1}\NormalTok{(Heartdata\_per\_Id}\SpecialCharTok{$}\NormalTok{n, }\AttributeTok{cum.percent =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{main =} \StringTok{\textquotesingle{}Number of daily heartrate data provided by users\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabeat-Marketing-Strategy_files/figure-latex/unnamed-chunk-73-1.pdf}
+
+\begin{verbatim}
+## Heartdata_per_Id$n : 
+##         Frequency Percent Cum. percent
+## 4               1     7.1          7.1
+## 16              1     7.1         14.3
+## 18              3    21.4         35.7
+## 23              1     7.1         42.9
+## 24              1     7.1         50.0
+## 28              1     7.1         57.1
+## 30              1     7.1         64.3
+## 31              5    35.7        100.0
+##   Total        14   100.0        100.0
+\end{verbatim}
+
+Observations: 1. About 14 users provided heart rate data. 2. Among these
+users only 7 users provided data for above 27 days. 3. Users are not as
+keen in recording heart rate per second as much as their intensities of
+activities.
+
+\hypertarget{consolidated-observations}{%
+\subsubsection{Consolidated
+Observations}\label{consolidated-observations}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Each user is different in terms of their fitness regime.
+\item
+  Users mostly do some form of moderate activities daily
+\item
+  Not many users have reported sleep activity. This may be due to
+  charging of Fitbit or inconvenience in wearing it during sleep
+\end{enumerate}
+
+\hypertarget{answers-to-questions}{%
+\subsubsection{Answers to questions}\label{answers-to-questions}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  What are the current trends in smart device usage? There are several
+  segments of users based on the type of activity they do on a daily
+  basis. Very few users do intensive physical activities or walk more
+  than 20k steps daily (In the current case 2). Most users walk close
+  5-10k steps a day. Average steps of all users is \textasciitilde7500
+  Moderate activity is common among users Each user is a unique
+  individual hence they do not show Users were more likely to move more
+  on Sunday
+\item
+  How could these trends apply to Bellabeat customers?
+\item
+  How could these trends influence Bellabeat Marketing strategy?
+\end{enumerate}
+
+\hypertarget{shortcomings-with-fitbit}{%
+\subsubsection{Shortcomings with
+Fitbit}\label{shortcomings-with-fitbit}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Standard steps per hour are programmed and the fitness device gives an
+  hourly cue to move. There are times you could be busy in not in a
+  condition to move.
+\end{enumerate}
+
+\hypertarget{act}{%
+\subsection{Act}\label{act}}
+
+To improve the use to Bellabeat fitness devices 1. The Bellabeat app can
+give badges to user based on their achievements. 2. Bellabeat app can
+give a weekly summary of user activity and encourage them towards a
+fitness regime. 3. Users with 100+ days activity streak or many number
+of badges can be given discounts on personal trainer services or other
+Bellabeat products. 4. Bellabeat device should have a provision for
+users to record/set sleep or work hours so that the fitness device does
+not prompt them to move when they are busy. 5. Bellabeat products can
+also have special functions to record household chores as daily
+activities.
+
+\end{document}
